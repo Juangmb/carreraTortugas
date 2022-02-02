@@ -12,8 +12,8 @@ class Circuito():
         self.__screen = turtle.Screen()
         self.__screen.setup(width,height)
         self.__screen.bgcolor("lightgray")
-        self.__startLine = -width/2 + 20
-        self.__finishLine = width/2 - 45
+        self.__startLine = -width/2 * 0.95
+        self.__finishLine = width/2 * 0.88
         
         self.__createRunners()
     
@@ -22,7 +22,7 @@ class Circuito():
         for i in range(x):
             new_turtle = turtle.Turtle()
             new_turtle.hideturtle()
-            new_turtle.speed(3)
+            new_turtle.speed(100)
             new_turtle.shape("turtle")
             new_turtle.shapesize(2,2,2)
             new_turtle.penup()
@@ -46,7 +46,7 @@ class Circuito():
         
     
 if __name__ == "__main__":
-    circuito = Circuito(640,480)
+    circuito = Circuito(1000,480)
     input("Realicen sus apuestas: ")
     circuito.competir()
     
